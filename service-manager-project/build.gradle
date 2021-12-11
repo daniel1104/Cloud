@@ -1,0 +1,21 @@
+ext {
+    set('springCloudVersion', "2020.0.4")
+}
+
+dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.4.12'
+    implementation 'org.modelmapper:modelmapper:2.3.9'
+    implementation project(':common')//Libreria commons - multiproyectos
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+
+    runtimeOnly 'com.h2database:h2'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}

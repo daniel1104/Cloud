@@ -1,0 +1,4 @@
+rootProject.name = 'ManagerProject'
+
+include 'service-manager-project'
+include 'common'
